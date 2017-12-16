@@ -404,3 +404,8 @@ td img {
     background-color: rgba(255, 255, 255, 0.3);
     color: black;
 }
+
+.error {
+    text-align: center;
+    font-size: 30px;
+}
