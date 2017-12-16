@@ -190,7 +190,7 @@ select {
  /* MY CODE */
 
 body {
-    background-image: url('../images/teste.jpg');
+    background-image: url('../images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -306,6 +306,65 @@ footer {
     text-align: center;
 }
 
+.center {
+    text-align: center;
+}
+
 .txt {
     font-size: 40px;
+}
+
+.form {
+    width: 150px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 3px;
+}
+
+.listItems {
+    margin: 5px;
+    border:2px  solid blue;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.inline {
+    display: inline;
+    padding: 5px;
+    border-radius: 12px;
+    margin: 5px;
+    border:2px  solid blue;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.margintop {
+    margin-top: 30px;
+}
+
+a {
+    color: black
+}
+a:hover {
+    color: white
+}
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
 }

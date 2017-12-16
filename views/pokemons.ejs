@@ -1,3 +1,139 @@
 <% include partials/header %>
 
-<% include partials/footer %>
+    <div class="container_12">
+        <div class="grid_8 prefix_2 sufix_4 bgpage margintop">
+        <table>
+            <thead>
+                <th>Image</th>
+                <th>Name:</th>
+                <th>Ability:</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="<%= info.sprites.front_default %>" />
+                    </td>
+                    <td>
+                        <%= info.forms[0].name %>
+                    </td>
+                    <td>
+                        <ul>
+                            <% info.abilities.map(content => { %>
+                                <li>
+                                    <%=content.ability.name %>
+                                </li>
+                                <%})%>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--table with stats -->
+        <table>
+            <thead>
+                <th colspan="3">Stats</th>
+                <tr>
+                    <th>Name: </th>
+                    <th>effort</th>
+                    <th>base_stat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>
+                    <ul>
+                        <% info.stats.map(content => { %>
+                            <li>
+                                <%=content.stat.name %>
+                            </li>
+                            <%})%>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <% info.stats.map(content => { %>
+                            <li>
+                                <%=content.effort %>
+                            </li>
+                            <%})%>
+                    </ul>
+                </td>
+                <td>
+                    <ul style="list-style-type: none">
+                        <% info.stats.map(content => { %>
+                            <li>
+                                <%=content.base_stat %>
+                            </li>
+                            <%})%>
+                    </ul>
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Weight: </td>
+                    <td>
+                        <%=info.weight%>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- table with moves-->
+        <table>
+            <thead>
+                <th colspan="2">Moves</th>
+
+            </thead>
+            <tbody>
+
+                <td>
+                    <ul>
+                        <% for(let i = 0; i < Math.floor(info.moves.length / 2); i++) {%>
+                            <li>
+                                <%=info.moves[i].move.name %>
+                            </li>
+                            <%}%>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <% for(let i = Math.floor(info.moves.length/2); i < info.moves.length; i++) {%>
+                            <li>
+                                <%=info.moves[i].move.name %>
+                            </li>
+                            <%}%>
+                    </ul>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- table with types-->
+        <table>
+            <thead>
+                <th colspan="2">Types</th>
+
+            </thead>
+            <tbody>
+
+                <td>
+                    <ul>
+                        <% info.types.forEach(content => { %>
+                            <li>
+                                <%= content.type.name %>
+                            </li>
+                            <%})%>
+                    </ul>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    </div>
+
+
+
+    <% include partials/footer %>

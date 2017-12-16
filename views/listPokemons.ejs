@@ -1,3 +1,75 @@
 <% include partials/header %>
 
+    <div class="container_12 bgpage">
+        <div class="grid_6 prefix_4 sufix_2 margintop">
+            <form method="get" action="/pokemons/info">
+                <input name="name" class="form" type="text" required maxlength="30" placeholder="Find a pokemon" />
+                <button class="form">Search</button>
+            </form>
+        </div>
+
+        <div class="grid_11 prefix_1 margintop">
+            <div class="grid_5" >
+            <ul>
+                <% for(let i  = 0; i < results.results.length / 2; i++) {%>
+                    <a href="/pokemons/info/<%=results.results[i].name %>">
+                        <li class="listItems">
+                            <%=results.results[i].name%>
+                        </li>
+                    </a>
+                    <%}%>
+            </ul>
+            </div>
+            <div class="grid_5">
+                <ul>
+                    <% for(let i  = 10; i < results.results.length; i++) {%>
+                        <a href="/pokemons/info/<%=results.results[i].name %>">
+                            <li class="listItems">
+                                <%=results.results[i].name%>
+                            </li>
+                        </a>
+                        <%}%>
+                </ul>
+            </div>
+        </div>
+        <div class="grid_11 prefix_1 margintop">
+        <nav aria-label="navigation">
+            <ul>
+                <% if(results.previous !== null && results.results.length > 0) { %>
+
+                    <li class="inline">
+                        <a href="/pokemons/?limit=<%=parseInt(locals.limit) - 1 %>" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span>Previous</span>
+                        </a>
+                    </li>
+                    <%}%>
+                        <% if(results.results.length > 0 && results.next !== null) { %>
+
+
+                            <%for(let i = locals.limit; i <= parseInt(locals.limit) + 4; i++) { %>
+                                <% if(i <= 41) { %>
+                                    <li class="inline">
+                                        <a class="page-link" href="/pokemons/?limit=<%=i %>">
+                                            <%=i%>
+                                        </a>
+                                    </li>
+                                    <% } %>
+
+                                        <%}}%>
+                                            <% if(results.next !== null && results.results.length > 0) { %>
+
+                                                <li class="inline">
+                                                    <a href="/pokemons/?limit=<%=parseInt(locals.limit) + 1 %>" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                        <span>Next</span>
+                                                    </a>
+                                                </li>
+                                                <%}%>
+            </ul>
+        </nav>
+        <br>
+        </div>
+    </div>
+    </div>
 <% include partials/footer %>
