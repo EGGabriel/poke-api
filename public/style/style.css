@@ -1,0 +1,311 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    /*background: ;
+	color: ;
+	*/
+    font-size: 100%;
+    line-height: 1.25;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    color: #9baaa7;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover,
+a:focus {
+    color: rgb(29, 17, 194);
+    ;
+}
+
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+ /* MY CODE */
+
+body {
+    background-image: url('../images/teste.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding-top: 20px;
+    border-bottom: 3px solid rgb(29, 17, 194);
+    height: 65px;
+    position: relative;
+    font-size: 20px;
+}
+
+header ul {
+    margin-top: 15px;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    transition: 1s;
+}
+
+header ul li a:hover {
+    transition: 0.5s;
+    background-color: black;
+    border-radius: 25px; 
+    padding: 8px;
+    color: rgb(255, 255, 255);
+}
+
+footer {
+    color: white;
+}
+
+
+.logo {
+    width: 200px;
+    float: left;
+    position: absolute;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    width: 225px;
+    transition: 0.5s;
+}
+
+.bgpage {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 3px solid rgb(29, 17, 194);
+    border-bottom: 3px solid rgb(29, 17, 194);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+}
+
+.bgpagehome {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 3px solid rgb(29, 17, 194);
+    border-bottom: 3px solid rgb(29, 17, 194);
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+}
+
+.btn {
+    width: 23%;
+    border-radius: 12px;
+    padding: 6px;
+    background: rgb(29, 17, 194);
+    font-family: Arial;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background: rgb(5, 0, 66);
+    text-decoration: none;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.centerhome {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.txt {
+    font-size: 40px;
+}
