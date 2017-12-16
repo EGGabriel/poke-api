@@ -1,3 +1,60 @@
 <% include partials/header %>
 
+  <div class="container_12">
+    <div class="bgpage margintop pokeInfo">
+      <table>
+        <thead>
+          <th>Image</th>
+          <th>Name:</th>
+          <th>Category:</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="<%= info.sprites.default %>" />
+            </td>
+            <td>
+              <%= info.name %>
+            </td>
+            <td>
+              <ul>
+                <li>
+                  <%=info.category.name %>
+                </li>
+
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <%if(info.effect_entries.length > 0) { %>
+        
+        <!--table with effects -->
+        <table>
+          <thead>
+            <th colspan="3">Effect entries</th>
+          </thead>
+          <tbody>
+            <td>Short effect: </td>
+            <td>
+              <%=info.effect_entries[0].short_effect %>
+            </td>
+            <tr>
+              <td>Effect: </td>
+              <td>
+                <%= info.effect_entries[0].effect %>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="1">cost: </td>
+              <td>
+                <%=info.cost%>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <%} %>
+    </div>
+  </div>
 <% include partials/footer %>
