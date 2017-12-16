@@ -251,7 +251,7 @@ footer {
     margin-bottom: 50px;
     border-top: 3px solid rgb(29, 17, 194);
     border-bottom: 3px solid rgb(29, 17, 194);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 12px;
 }
 
@@ -332,6 +332,11 @@ footer {
     font-size: 30px;
 }
 
+.listItems:hover {
+    background-color: rgb(255, 255, 255);
+    border:2px  solid red;
+}
+
 .inline {
     display: inline;
     padding: 5px;
@@ -344,6 +349,10 @@ footer {
     font-size: 30px;
 }
 
+.inline:hover {
+    background-color: rgb(255, 255, 255)
+}
+
 .margintop {
     margin-top: 30px;
 }
@@ -352,11 +361,12 @@ a {
     color: black
 }
 a:hover {
-    color: white
+    color: black
 }
 
 table, td, th {    
     border: 1px solid #ddd;
+    border-radius: 12px;
     text-align: left;
 }
 
@@ -367,4 +377,30 @@ table {
 
 th, td {
     padding: 15px;
+}
+
+th {
+    font-weight: bold;
+    font-size: 30px;
+}
+td {
+    font-size: 20px;
+}
+
+.pokeInfo {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+td img {
+    width: 150px;
+}
+
+.txtCreated {
+    font-size: 30px;
+    text-align: center;
+    border:2px  solid blue;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
 }
