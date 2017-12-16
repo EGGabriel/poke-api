@@ -1,22 +1,26 @@
 //Dependencias
 const express = require('express')
 const app = express()
-const path = require('path')
-const PORT = 3000
-
-//Express Configuration
+const PORT = 3001
+const compression = require('compression')
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
+
+//Definindo uma pasta Publica
 app.use(express.static('public'))
 
-//Ejs Configuration
-app.set('views', path.join(__dirname, 'public'))
+//Facilitando as Rotas
+const index = require('./routes/index')
+const getPokemon = require('./routes/getPokemon')
+const listItems = require('./routes/listItems')
+
+//Configuando Ejs
 app.set('view engine', 'ejs')
 
-app.get('/', (request,response) =>{
-    response.render('index')
-})
+app.use('/', index)
+app.use('/pokemons', getPokemon)
+app.use('/items', listItems)
 
-app.listen(PORT, () => { 
+app.listen(PORT, () => {
     console.log('Server is running on port ' + PORT)
 })
